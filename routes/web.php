@@ -1,7 +1,8 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\HelloWorldController;
+use App\Http\Controllers\LandingController;
+use App\Http\Controllers\UrlController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,9 +16,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', [LandingController::class, 'index']);
+Route::get('/url/shorten', [UrlController::class, 'indexpublic']);
+Route::post('/url/shorten/post', [UrlController::class, 'shorten']);
 
 Route::get('/hello-world', [HelloWorldController::class, 'index']);
 
