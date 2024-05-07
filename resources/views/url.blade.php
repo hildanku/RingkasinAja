@@ -165,7 +165,12 @@
   <main class="px-3" id="Home">
 
     <div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-        <form class="lead" action="{{ url('/url/shorten/post') }}" method="post">
+      <div class="d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+      <form class="lead" action="{{ url('/url/shorten/post') }}" method="post">
         @csrf
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Original URL</label>
@@ -173,6 +178,9 @@
             </div>
             <button type="submit" class="btn btn-md btn-light fw-bold border-white bg-white">Submit</button>
         </form>
+        </div>
+</div>
+      </div>
     </div>
   </main>
 
